@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.img-responsive {
+  max-width: 100%;
+}
+
+.slide-wrap {
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  margin: 20px auto;
+}
+
+.slide_holder {
+  background: #000;
+  height: 500px;
+  position: relative;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.slide_menus {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+
+.slide_menus .menu {
+  float: left;
+  width: 300px;
+  height: 500px;
+}
+
+.slide_menus .menu .img-responsive {
+  height: 500px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+}
+
+.animation {
+  transition: transform 0.3s ease-out;
+}
+
+.dots-list {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.dots-list > div {
+  display: inline-flex;
+  width: 10px;
+  height: 10px;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #ccc;
+  margin-right: 15px;
+}
+.dots-list > div.active {
+  background-color: #000000;
+}
+.dots-list > div:last-child {
+  margin-right: 0;
+}
