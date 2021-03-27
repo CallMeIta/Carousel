@@ -1,18 +1,18 @@
 export const SliderData2 = [
   {
     id: 'txt',
-    text: 'this shit says something',
+    text: 'SLIDE 1',
   },
   {
     id: 'txt1',
-    text: 'this shit says something',
+    text: 'SLIDE 2',
   },
   {
     id: 'txt2',
-    text: 'this shit says something',
+    text: 'SLIDE 3',
   },
   {
     id: 'txt3',
-    text: 'this shit says something',
+    text: 'SLIDE 4',
   },
 ];
