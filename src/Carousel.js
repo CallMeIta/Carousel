@@ -155,9 +155,9 @@ const Carousel = ({ data, render }) => {
         </div>
       </div>
       <div className="dots-list">
-        {SliderData1.map((slide, index) => (
+        {data.map((record, index) => (
           <div
-            key={slide.id + 1}
+            key={record.id + 1}
             onClick={() => setIndex(index)}
             className={movingProps.current.slideIndex === index ? 'active' : ''}
           />
