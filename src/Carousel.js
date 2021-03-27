@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { SliderData } from './Slides';
+import { SliderData1 } from './SliderData1';
+import { SliderData2 } from './SliderData2';
 
-const Carousel = () => {
+const Carousel = ({ data, render }) => {
   const holderRef = useRef();
   const menusRef = useRef();
   const sliderRef = useRef();
@@ -35,7 +36,7 @@ const Carousel = () => {
       ).length;
       movingProps.current.slideWidth = sliderRef.current.clientWidth;
       menusRef.current.style.width =
-        1200 * movingProps.current.numberSlideItem + 'px';
+        100000 * movingProps.current.numberSlideItem + 'px';
       window.addEventListener('mouseup', mouseUp);
     }
     return () => {
@@ -145,16 +146,16 @@ const Carousel = () => {
           className="slide_holder"
         >
           <div id="menus" className="slide_menus animation" ref={menusRef}>
-            {SliderData.map((slide, index) => (
-              <div className="menu" key={slide.id}>
-                <img className="img-responsive" src={slide.src} alt="" />
+            {data.map((record, index) => (
+              <div className="menu" key={record.id}>
+                {render(record)}
               </div>
             ))}
           </div>
         </div>
       </div>
       <div className="dots-list">
-        {SliderData.map((slide, index) => (
+        {SliderData1.map((slide, index) => (
           <div
             key={slide.id + 1}
             onClick={() => setIndex(index)}

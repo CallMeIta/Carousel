@@ -23,7 +23,7 @@
 }
 
 .slide_holder {
-  background: #000;
+  /* background: #000; */
   height: 500px;
   position: relative;
   -webkit-user-select: none;
