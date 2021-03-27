@@ -12,7 +12,7 @@ const Carousel = () => {
     moveX: undefined,
     touchMoveX: undefined,
     longTouch: undefined,
-    slideWidth: 300,
+    slideWidth: 1200,
     numberSlideItem: null,
     startSlide: false,
   });
@@ -35,7 +35,7 @@ const Carousel = () => {
       ).length;
       movingProps.current.slideWidth = sliderRef.current.clientWidth;
       menusRef.current.style.width =
-        300 * movingProps.current.numberSlideItem + 'px';
+        1200 * movingProps.current.numberSlideItem + 'px';
       window.addEventListener('mouseup', mouseUp);
     }
     return () => {

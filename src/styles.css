@@ -5,17 +5,18 @@
 }
 
 .container {
+  position: relative;
   width: 100%;
   max-width: 1200px;
   margin: auto;
 }
 
 .img-responsive {
-  max-width: 100%;
+  width: 1200px;
 }
 
 .slide-wrap {
-  width: 300px;
+  width: 1200px;
   height: 500px;
   overflow: hidden;
   margin: 20px auto;
@@ -41,7 +42,7 @@
 
 .slide_menus .menu {
   float: left;
-  width: 300px;
+  width: 1200px;
   height: 500px;
 }
 
@@ -79,3 +80,9 @@
 .dots-list > div:last-child {
   margin-right: 0;
 }
+/* .button-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000;
+} */
