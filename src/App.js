@@ -7,7 +7,9 @@ import './carousel.css';
 export default function App() {
   return (
     <>
-      <Carousel data={SliderData1}>
+      <Carousel
+        data={SliderData1}
+      >
         {SliderData1.map((record, index) => (
           <div key={record.id}>
             <img
@@ -19,7 +21,9 @@ export default function App() {
           </div>
         ))}
       </Carousel>
-      <Carousel data={SliderData2}>
+      <Carousel
+        data={SliderData2}
+      >
         {SliderData2.map((record, index) => (
           <div key={record.id}>
             <p id={record.id}>{record.text}</p>
