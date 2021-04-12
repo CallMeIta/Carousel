@@ -31,15 +31,16 @@ const Carousel = ({ data, children }) => {
 
   useEffect(() => {
     if (sliderRef.current && movingProps.current.numberSlideItem === null) {
-      const menus = menusRef.current.querySelectorAll('.slide_menus > *');
+      const menus = menusRef.current.querySelectorAll(
+        '.slide_menus > *'
+      );
       movingProps.current.numberSlideItem = menus.length;
       menus.forEach((menu, index) => {
         menu.style.width = sliderRef.current.clientWidth + 'px';
       });
       movingProps.current.slideWidth = sliderRef.current.clientWidth;
       menusRef.current.style.width =
-        sliderRef.current.clientWidth * movingProps.current.numberSlideItem +
-        'px';
+        sliderRef.current.clientWidth * movingProps.current.numberSlideItem + 'px';
       window.addEventListener('mouseup', mouseUp);
     }
     return () => {
